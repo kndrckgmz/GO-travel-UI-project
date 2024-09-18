@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+:root {
+    --accent: #cc7f4c;
+}
+/* width */
+::-webkit-scrollbar {
+width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+background-color: rgb(255, 255, 255);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(0, 0, 0);
+} 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+a, button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.3rem;
+}
+
+a:hover{
+    color: var(--accent);
+
+}
+
+.primary-button {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.secondary-button {
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    border: 1px solid #d1d1d1;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.colored-button{
+    background-color: var(--accent);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: scale(1.04);
+}
+
+.drop-down-container{
+    position: relative;
+}
+.drop-down-container:hover > .drop-down{
+    opacity: 1;
+    pointer-events: unset;
+}
+.drop-down{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #f7f5ee;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 5px 2px #00000025;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 150px;
+    transition: all 0.3s;
+}
+
+.burger-menu{
+    display: none;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: all 0.4s;
+}
+
+@media (max-width: 900px){
+    .burger-menu{
+        display: unset;
+    }
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 4rem;
+        gap: 2rem;
+        width: 100vw;
+        flex-direction: column;
+        background-color: white;
+        padding: 1rem;
+        z-index: 10;
+        transform: translateY(-120%);
+    }
+    .menu > ul {
+        width: 100%;
+    }
+    .menu > ul,
+    .menu > div {
+        flex-direction: column;
+    }
+    .open{
+        transform: translateY(0);
+    }
+}
+
+.main-content{
+    height: calc(100vh - 4rem);
+    background-image: url(/img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 42px;
+    font-weight: 600;
+    gap: 1rem;
+}
+
+.tag-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 700;
+    gap:1rem;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#changing-text {
+    color: var(--accent);
+}
+
+/* Checkpoint 2 */
+
+.form-section {
+    width: 100%;
+    min-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: row;
+}
+
+.form-image {
+    background-color: black;
+    width: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.image {
+    object-fit: cover;
+}
+
+.form-container{
+    display: grid;
+    place-items: center;
+    width: 50%;
+    background-color: black;
+}
+
+.booking-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: end;
+    row-gap: 4rem;
+    column-gap: 1rem ;
+    padding: 4rem;
+    width: 100%;
+}
+
+.booking-form > div > h2 {
+    font-size: 30px;
+    font-weight: 700;
+    width: 100%;
+    color: var(--accent);
+}
+
+.booking-form > div > p {
+    width: 100%;
+    color: rgb(230, 230, 230);
+}
+
+.input-style{
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+}
+
+.textarea{
+    border-radius: 30px;
+    min-height: 100px;
+}
+
+.label-container{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 14px;
+    color: white;
+}
+
+.form-destination{
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+}
+.destination-container,
+.guests-container,
+.checkin-container,
+.checkout-container{
+    width: calc(50% - 0.5rem);
+}
+
+.description-container{
+    width: 100%;
+}
+
+#packages-container{
+    padding: 60px;
+}
+
+.package-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(33.33% - 20px);
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 2px #0000001b;
+    overflow: hidden;
+}
+
+.package-image{
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+
+.package-content-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.package-attractions > div {
+    font-weight: 700;
+}
+
+.package-star-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.package-location,
+.package-price{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.services-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px;
+    gap: 2rem;
+}
+
+.service-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px soild var(--accent);
+}
+
+@media (max-width: 900px){
+    .form-section {
+        flex-direction: column-reverse;
+    }
+
+    .form-image,
+    .form-container{
+        width: 100%;
+    }
+
+    .booking-form{
+        padding: 4rem 2rem;
+    }
+
+    .package-card{
+        width: 100%;
+    }
+
+    #packages-container{
+        padding: 16px;
+    }
+    
+    .package-image{
+        aspect-ratio: 1.5/1;
+    }
+}
