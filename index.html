@@ -23,9 +23,10 @@
         </div>
         <div class="menu" id="menu">
             <ul class="flex flex-row gap-4 font-semibold nav-links">
-                <li><a>Home</a></li>
-                <li><a>Book</a></li>
-                <li class="drop-down-container"><a>Packages
+                <li><a href="#home">Home</a></li>
+                <li><a href="#book">Book</a></li>
+                <li class="drop-down-container">
+                    <a href="#packages-container">Packages
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                             <path fill="currentColor" fill-rule="evenodd"
                                 d="M7 9a1 1 0 0 0-.707 1.707l5 5a1 1 0 0 0 1.414 0l5-5A1 1 0 0 0 17 9z"
@@ -40,9 +41,9 @@
                         <li><a>Germany</a></li>
                     </ul>
                 </li>
-                <li><a>Services</a></li>
-                <li><a>Gallery</a></li>
-                <li><a>About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
             <div class="flex flex-row gap-4">
                 <button class="secondary-button">Login</button>
@@ -50,7 +51,7 @@
             </div>
         </div>
     </nav>
-    <div class="main-content">
+    <div class="main-content" id="home">
         <div class="banner">
             <h1 class="title">Welcome to <div class="text-[44px] -skew-x-[10deg] font-bold">GO</div>
             </h1>
@@ -61,7 +62,8 @@
             <button class="primary-button">Book Now</button>
         </div>
     </div>
-    <div class="form-section">
+
+    <div class="form-section" id="book">
         <div class="form-image">
             <img src="/img/form-image.jpg" height="100%" width="100%" class="image"></img>
         </div>
@@ -106,7 +108,8 @@
 
     <div id="packages-container" class="flex flex-row flex-wrap gap-[30px] items-stretch justify-center bg-black">
     </div>
-    <div class="services-container">
+
+    <div class="services-container" id="services">
         <div class="w-full font-bold text-2xl text-center">Trust us</div>
         <div class="service-card">
             <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
@@ -158,9 +161,13 @@
         </div>
 
         <div class="service-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 24 24">
-                <path fill="var(--accent)"
-                    d="M20.04 8.71V4h-4.7L12 .69L8.71 4H4v4.71L.69 12L4 15.34v4.7h4.71L12 23.35l3.34-3.31h4.7v-4.7L23.35 12zM8.83 7.05c.98 0 1.77.79 1.77 1.78a1.77 1.77 0 0 1-1.77 1.77c-.99 0-1.78-.79-1.78-1.77c0-.99.79-1.78 1.78-1.78M15.22 17c-.98 0-1.77-.8-1.77-1.78a1.77 1.77 0 0 1 1.77-1.77c.98 0 1.78.79 1.78 1.77A1.78 1.78 0 0 1 15.22 17m-6.72.03L7 15.53L15.53 7l1.5 1.5z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 14 14">
+                <g fill="none" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M12.247 8.462c0-5.008-4.423-7.326-6.506-7.868c.78 1.95.737 3.393-.27 5.171a.478.478 0 0 1-.777.069l-1.28-1.452c-3.35 3.558-1.422 9.281 3.881 9.015c4.057-.25 4.952-2.952 4.952-4.935m-6.58 2.462L8.951 7.64" />
+                    <path
+                        d="M6.065 8.118a.25.25 0 1 1 0-.5m0 .5a.25.25 0 0 0 0-.5m2.659 3.329a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5" />
+                </g>
             </svg>
             <div class="font-bold text-xl text-center">
                 97% Customer Satisfaction
@@ -177,6 +184,115 @@
             </div>
         </div>
     </div>
+
+    <div class="gallery-container" id="gallery">
+        <div class="gallery-row-1">
+            <img class="gallery-image" src="/img/gallery/1.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/2.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/3.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/4.jpg"></img>
+        </div>
+        <div class="gallery-row-2">
+            <img class="gallery-image" src="/img/gallery/5.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/6.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/7.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/8.jpg"></img>
+        </div>
+        <div class="gallery-row-3">
+            <img class="gallery-image" src="/img/gallery/9.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/10.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/11.jpg"></img>
+            <img class="gallery-image" src="/img/gallery/12.jpg"></img>
+        </div>
+    </div>
+
+    <div class="about-section" id="about">
+        <div class="about-image-container">
+            <img src="/img/about.jpg" class="about-image"></img>
+        </div>
+        <div class="about-container">
+            <h2 class="-skew-x-[10deg] font-bold text-[3rem] text-[var(--accent)]">GO</h2>
+            <div>
+                Established: 2015
+            </div>
+            <div>
+                Headquarters: San Francisco, California, USA
+            </div>
+            <div>
+                About: GO is a modern travel company that specializes in providing personalized, adventure-filled travel
+                experiences for solo travelers, families, and corporate clients. Established in 2015, GO has quickly
+                grown to become a trusted name in the travel industry, offering curated vacation packages, flights,
+                hotel bookings, and immersive tours worldwide. The company prides itself on offering exceptional
+                customer service, eco-friendly travel options, and cutting-edge mobile technology to ensure seamless
+                planning and booking processes.
+            </div>
+            <div>
+                Mission: GO's mission is to make exploring the world easier, more affordable, and more environmentally
+                conscious. By leveraging technology and local partnerships, GO aims to create memorable journeys while
+                promoting sustainable travel practices.
+            </div>
+            <br>
+            <br>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 1024 1024">
+                    <path fill="var(--accent)"
+                        d="M934.32 65.904c10.432 0 17.776 1.938 21.6 3.41c4.592 12.224 10.753 56.031-34.528 101.343L690.4 401.633l1.664 28.656c3.504 59.968 10 167.44 15.6 259.567c4.944 82 9.633 159.44 9.936 166.032c.16 4.529.225 5.601-3.999 10.689c-9.44 11.472-27.056 30.912-41.904 47.024c-23.024-62.032-71.408-193.057-98.128-266.4l-34.336-94.368l-71.024 71.024l-130.608 125.584l-18.192 18.16l-.56 25.68c-.432 20.496-.336 57.28-.288 89.712c.064 22.592.129 43.12-.031 54.432c-.288.528 4.368 1.152 3.936 1.904c-2.784-4.464-5.776-9.28-8.944-14.288c-26.336-42-62.784-100.096-73.904-118.224l-8.128-13.28l-13.344-8.065c-48.528-29.311-102.288-63.151-135.088-84.287c1.136-.656 2.063 2.816 2.815 2.415h2.128c10.32 0 27.376.224 46.496.496c25.008.336 53.376.752 75.088.752c8.32 0 15.712-.064 21.664-.192l25.68-.592l18.16-18.16l125.744-129.712l70.784-70.752l-93.935-34.56c-70.592-25.967-205.808-76.464-269.056-100.224c16.223-14.944 35.775-32.688 47.183-42.129c3.184-2.624 5.665-3.967 7.376-3.967l2.256.064c7.056.336 94.688 6.064 179.407 11.6c89.936 5.872 191.44 12.496 249.151 16.16l28.848 1.808l231.024-231.04c32.448-32.4 64.32-37.248 80.449-37.248m.001-63.997c-37.808 0-84.222 14.526-125.678 55.998L598.035 268.497c-118.624-7.504-422.432-27.6-429.968-27.808a101 101 0 0 0-4.88-.129c-10.256 0-27.968 1.968-48.128 18.624c-23.664 19.569-73.008 65.97-73.008 65.97c-11.904 11.935-17.936 26.719-16.496 40.623c.88 8.4 5.44 23.712 26.064 31.777c12.528 4.912 211.904 79.504 303.969 113.376L229.844 640.642c-5.569.128-12.465.192-20.257.192c-38.336 0-97.776-1.248-121.601-1.248c-3.152 0-5.68 0-7.473.064c-7.248.224-22.256-3.344-61.84 29.744l-2.816 2.624C3.985 683.89 1.201 695.73.945 703.554c-.256 8.064 1.904 19.68 13.568 29.024c7.008 5.664 96.848 63.184 170.527 107.68c17.665 28.817 98.945 158 103.185 165.008c6.193 10.464 16.32 16.432 28.433 16.816h1.008c11.776 0 23.872-5.84 35.712-17.344c33.504-39.184 28.88-55.407 29.023-62.224c.528-21.376-.368-111.936.4-147.84l130.592-125.6c33.376 91.68 106.336 289.008 111.216 301.567c8.128 20.624 23.44 25.153 31.84 26c1.376.16 2.785.225 4.16.225c12.625 0 25.712-5.936 36.432-16.655c0 0 46.256-49.088 65.904-72.976c19.68-23.872 18.913-44.256 18.529-53.872c-.16-6.656-18.689-308.816-25.569-426.816L966.561 215.89c74.657-74.689 62.785-164.688 35.057-192.368c-12.24-12.304-37.024-21.615-67.297-21.616z" />
+                </svg>
+                <div class="flex flex-row gap-1 text-xl">
+                    Just
+                    <h2 class="-skew-x-[10deg] font-bold text-[var(--accent)]">GO</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <h2 class="-skew-x-[10deg] text-[3rem] font-bold text-[var(--accent)]">GO</h2>
+            <div>&copy; 2024 GO</div>
+            <div>All Rights Reserved</div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-title">Socials</div>
+            <a class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95" />
+                </svg>
+                Facebook
+            </a>
+            <a class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                </svg>
+                Instagram
+            </a>
+            <a class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
+                </svg>
+                X
+            </a>
+        </div>
+        <div class="footer-section">
+            <div class="footer-title">Contact</div>
+            <a class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z" />
+                </svg>
+                +21-9102837465
+            </a>
+            <a class="footer-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z" />
+                </svg>
+                just@go.com
+            </a>
+        </div>
+    </footer>
 </body>
 
 <script defer>
