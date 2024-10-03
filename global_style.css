@@ -437,7 +437,80 @@ footer{
     gap: 1rem;
 }
 
+.modal-cover{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #00000027;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-open{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal{
+    background-color: #ffffff;
+    width: 600px;
+    max-width: calc(100vw - 2rem);
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px 4px #0000000f;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    width: 100%;
+}
+
+.modal-form > div > h2 {
+    font-size: 30px;
+    font-weight: 700;
+    width: 100%;
+    color: var(--accent);
+}
+
+.modal-label-container{
+    width: 100%;
+}
+
+.information{
+    width: 48%;
+}
+
+.modal-label-container > label {
+    color: #000000;
+}
+
+
+.modal-label-container > input,
+.modal-label-container > select {
+    border: 1px solid #000000;
+}
+
+.modal-button{
+    width: 100%;
+}
+
 @media (max-width: 900px){
+    .information{
+        width: 100%;
+    }
+
     .form-section {
         flex-direction: column-reverse;
     }

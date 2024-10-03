@@ -46,8 +46,8 @@
                 <li><a href="#about">About</a></li>
             </ul>
             <div class="flex flex-row gap-4">
-                <button class="secondary-button">Login</button>
-                <button class="primary-button">Register</button>
+                <button class="secondary-button" onclick="openLoginModal()">Login</button>
+                <button class="primary-button" onclick="openRegisterModal()">Register</button>
             </div>
         </div>
     </nav>
@@ -245,6 +245,7 @@
             </div>
         </div>
     </div>
+
     <footer>
         <div class="footer-section">
             <h2 class="-skew-x-[10deg] text-[3rem] font-bold text-[var(--accent)]">GO</h2>
@@ -293,6 +294,90 @@
             </a>
         </div>
     </footer>
+
+    <div class="modal-cover" id="login-modal-cover">
+        <div class="modal">
+            <form class="modal-form">
+                <div class="flex flex-row space-betwee items-start w-full">
+                    <h2>Login</h2>
+                    <button type="reset" onclick="closeLoginModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M12 12L7 7m5 5l5 5m-5-5l5-5m-5 5l-5 5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="modal-label-container">
+                    <label>Email</label>
+                    <input name="Email" class="input-style" type="email" placeholder="Email" required></input>
+                </div>
+                <div class="modal-label-container">
+                    <label>Password</label>
+                    <input name="Password" class="input-style" type="password" placeholder="Password" min="8"
+                        required></input>
+                </div>
+                <button class="primary-button colored-button modal-button" type="submit">Login</button>
+                <div class="flex flex-row gap-2">
+                    Don't have an account? <button onclick="openRegisterModal()" type="reset">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-cover" id="register-modal-cover">
+        <div class="modal">
+            <form class="modal-form">
+                <div class="flex flex-row space-betwee items-start w-full">
+                    <h2>Register</h2>
+                    <button type="reset" onclick="closeRegisterModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M12 12L7 7m5 5l5 5m-5-5l5-5m-5 5l-5 5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="modal-label-container information">
+                    <label>Full Name</label>
+                    <input name="Guests" class="input-style" type="text" placeholder="Full Name" required></input>
+                </div>
+                <div class="modal-label-container information">
+                    <label>Gender</label>
+                    <select name="Destination" class="form-destination" placeholder="Select Destination" required>
+                        <option value="">Gender</option>
+                        <option value="France">Male</option>
+                        <option value="Germany">Female</option>
+                        <option value="Brazil">Other</option>
+                    </select>
+                </div>
+                <div class="modal-label-container information">
+                    <label>Date of Birth</label>
+                    <input name="Check-in" class="input-style" type="date" required></input>
+                </div>
+                <div class="modal-label-container information">
+                    <label>Contact</label>
+                    <input name="Contact" class="input-style" type="number" min="1000000000" max="9999999999"
+                        placeholder="Contact Number" required></input>
+                </div>
+
+
+                <div class="modal-label-container">
+                    <label>Email</label>
+                    <input name="Email" class="input-style" type="email" placeholder="Email" required></input>
+                </div>
+                <div class="modal-label-container">
+                    <label>Password</label>
+                    <input name="Password" class="input-style" type="password" placeholder="Password" min="8"
+                        required></input>
+                </div>
+                <button class="primary-button colored-button modal-button" type="submit">Register</button>
+                <div class="flex flex-row gap-2">
+                    Already have an account? <button onclick="openLoginModal()" type="reset">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 <script defer>
@@ -468,6 +553,35 @@
     }
 
     displayPackages(travelPackages)
+
+    const openLoginModal = () => {
+        closeRegisterModal()
+        document.body.style.overflow = 'hidden';
+        setTimeout(function () {
+            let a = document.getElementById("login-modal-cover")
+            a.classList.add("modal-open")
+        }, 100)
+    }
+
+    const openRegisterModal = () => {
+        closeLoginModal()
+        document.body.style.overflow = 'hidden';
+        setTimeout(function () {
+            let a = document.getElementById("register-modal-cover")
+            a.classList.add("modal-open")
+        }, 100)
+    }
+
+    const closeLoginModal = () => {
+        document.body.style.overflow = 'unset';
+        let a = document.getElementById("login-modal-cover")
+        a.classList.remove("modal-open")
+    }
+    const closeRegisterModal = () => {
+        document.body.style.overflow = 'unset';
+        let a = document.getElementById("register-modal-cover")
+        a.classList.remove("modal-open")
+    }
 </script>
 
 </html>
